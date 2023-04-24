@@ -1,0 +1,36 @@
+#include <stdio.h> 
+int a[10];
+int temp,min,m; 
+void sort() 
+{ 
+m=0; 
+for(int i=0;i<9;i++) 
+{ 
+min=a[i]; 
+for(int j=i+1;j<10;j++) 
+{ 
+if(a[j]<min) 
+{ 
+min=a[j]; 
+m=j; 
+} 
+} 
+temp=a[i]; 
+a[i]=a[m]; 
+a[m]=temp; 
+} 
+for(int i=0;i<10;i++) 
+{ 
+printf("%d \t",a[i]); 
+} 
+} 
+void main() 
+{ 
+int x,y; 
+printf("Enter elements of Array:"); for(int i=0;i<10;i++) 
+{ 
+scanf("%d",&a[i]);
+} 
+sort(); 
+} 
+
